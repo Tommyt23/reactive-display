@@ -6,17 +6,18 @@ canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
+const songs = ['songs/Bassline Junkie.mp3', 'songs/Bonkers.mp3', 'songs/Freed From Desire.mp3', 'songs/God\'s Plan.mp3', 'songs/Gold Digger.mp3', 'songs/Just Wanna Rock.mp3', 'songs/Macklemore & Ryan Lewis - Can\'t Hold Us (Lyrics) ft. Ray Dalton.mp3', 'songs/Simmer (feat. Burna Boy).mp3', 'songs/Yeah 3x.mp3']
 
 audio1.addEventListener('ended', function () {
     audio1.currentTime = 0;
+    audio1.src = songs[Math.floor(Math.random() * songs.length)];
     audio1.play();
 });
 
-file.addEventListener('change', function () {
+container.addEventListener('click', function () {
     const audioCtx = new AudioContext();
-    const files = this.files;
     const audio1 = document.getElementById('audio1');
-    audio1.src = URL.createObjectURL(files[0]);
+    audio1.src = songs[Math.floor(Math.random() * songs.length)];
     audio1.load();
     audio1.play();
     audioSource = audioCtx.createMediaElementSource(audio1);
