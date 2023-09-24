@@ -6,8 +6,7 @@ canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
-const songs = ['songs/Bassline Junkie.mp3', 'songs/Bonkers.mp3', 'songs/Freed From Desire.mp3', 'songs/God\'s Plan.mp3', 'songs/Gold Digger.mp3', 'songs/Just Wanna Rock.mp3', 'songs/Macklemore & Ryan Lewis - Can\'t Hold Us (Lyrics) ft. Ray Dalton.mp3', 'songs/Simmer (feat. Burna Boy).mp3', 'songs/Yeah 3x.mp3']
-
+const songs = ['songs/24K Magic.opus', 'songs/Barking.opus', 'songs/Bassline Junkie.opus', 'songs/Best Life.opus', 'songs/Boasty (feat. Idris Elba) (Kingdom 93 Remix).opus', 'songs/Bodak Yellow.opus', 'songs/Bonkers.opus', 'songs/Can\'t Hold Us (feat. Ray Dalton).opus', 'songs/Cosby Sweater.opus', 'songs/Crazy In Love.opus', 'songs/Die Young.opus', 'songs/Don\'t Stop The Party.opus', 'songs/Freed From Desire.opus', 'songs/Friday (Dopamine Re-Edit).opus', 'songs/Full Thrift Samba (Samba _ 50 BPM).opus', 'songs/Funky Friday.opus', 'songs/Get Busy.opus', 'songs/God\'s Plan.opus', 'songs/Gold Digger.opus', 'songs/Gyal You a Party Animal.opus', 'songs/Hips Don\'T Lie.opus', 'songs/It’s My Birthday.opus', 'songs/Just Wanna Rock.opus', 'songs/Lean & Bop.opus', 'songs/Lemonade.opus', 'songs/Loyal.opus', 'songs/Nasty Freestyle (The Replay).opus', 'songs/No Type.opus', 'songs/No Words.opus', 'songs/ORANGE SODA.opus', 'songs/Rain.opus', 'songs/Ramenez la coupe à la maison.opus', 'songs/Rich Flex.opus', 'songs/Samba de Janeiro.opus', 'songs/SICKO MODE.opus', 'songs/Simmer (feat. Burna Boy).opus', 'songs/Single Ladies (Put a Ring on It).opus', 'songs/Sweet Dreams (Remix).opus', 'songs/Talk Dirty (feat. 2 Chainz).opus', 'songs/Temperature.opus', 'songs/The Box.opus', 'songs/Turn Down for What.opus', 'songs/Vamp Anthem.opus', 'songs/Whoopty.opus', 'songs/Worth It.opus', 'songs/Yeah 3x.opus']
 audio1.addEventListener('ended', function () {
     audio1.currentTime = 0;
     audio1.src = songs[Math.floor(Math.random() * songs.length)];
