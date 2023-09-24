@@ -7,7 +7,10 @@ const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
 
-
+audio1.addEventListener('ended', function () {
+    audio1.currentTime = 0;
+    audio1.play();
+});
 
 file.addEventListener('change', function () {
     const audioCtx = new AudioContext();
