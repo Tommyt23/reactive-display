@@ -20,7 +20,6 @@ audio1.addEventListener('ended', function () {
     let filename = audio1.src.replace("http://127.0.0.1:5500/songs/", "")
     filename = filename.replace("https://reactive-display.vercel.app/songs/", "")
     filename = filename.replace(".opus", "")
-    replacehexvals(filename);
     
     filename = filename.replaceAll('%20', ' ')
     console.log("filename:", filename);
@@ -37,10 +36,11 @@ container.addEventListener('click', function () {
     let filename = audio1.src.replace("http://127.0.0.1:5500/songs/", "")
     filename = filename.replace("https://reactive-display.vercel.app/songs/", "")
     filename = filename.replace(".opus", "")
-    replacehexvals(filename);
+    filename = filename.replaceAll('%20', ' ')
+    filename = filename.replaceAll('%C3', 'Ã')
+    filename = filename.replaceAll('%A0', ' ')
     console.log("filename:", filename);
 
-    filename = filename.replaceAll('%20', ' ')
     document.title = filename;
     
     audio1.load();
@@ -117,15 +117,3 @@ container.addEventListener('load', function () {
 
     animate();
 });
-
-function replacehexvals(filename) {
-    filename = filename.replaceAll('%20', ' ')
-    filename = filename.replaceAll('%21', '!')
-    filename = filename.replaceAll('%2F', '/')
-    filename = filename.replaceAll('%3A', ':')
-    filename = filename.replaceAll('%2C', ',')
-    filename = filename.replaceAll('%3D', '=')
-    filename = filename.replaceAll('%25', '%')
-    filename = filename.replaceAll('%3F', '?')
-    return filename;
-}
