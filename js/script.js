@@ -40,6 +40,7 @@ container.addEventListener('click', function () {
     replacehexvals(filename);
     console.log("filename:", filename);
 
+    filename = filename.replaceAll('%20', ' ')
     document.title = filename;
     
     audio1.load();
