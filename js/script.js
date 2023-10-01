@@ -2,7 +2,7 @@ const container = document.getElementById('container');
 const canvas = document.getElementById('canvas1');
 const file = document.getElementById('fileupload');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight*(.60);
 const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
@@ -89,7 +89,7 @@ function drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray) {
     }
 }
 
-container.addEventListener('load', function () {
+/*container.addEventListener('load', function () {
     const audioCtx = new AudioContext();
     const audio1 = document.getElementById('audio1');
     audio1.src = songs[Math.floor(Math.random() * songs.length)];
@@ -116,4 +116,4 @@ container.addEventListener('load', function () {
     }
 
     animate();
-});
+});*/
