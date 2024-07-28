@@ -6,7 +6,7 @@ canvas.height = window.innerHeight*(.60);
 const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
-const songs = ["Better Days.opus", "Forget em.opus", "Get Through.opus", "Hustlin.opus", "Life.opus", "No Sleep.opus", "TIL I HEAREM SAY.opus", "Winning.opus"]
+const songs = ["songs/Better Days.opus", "songs/Forget em.opus", "songs/Get Through.opus", "songs/Hustlin.opus", "songs/Life.opus", "songs/No Sleep.opus", "songs/TIL I HEAREM SAY.opus", "songs/Winning.opus"]
 
 
 
