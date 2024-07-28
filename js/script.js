@@ -6,7 +6,7 @@ canvas.height = window.innerHeight*(.60);
 const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
-const songs = ['songs/24K Magic.opus', 'songs/Barking.opus', 'songs/Bassline Junkie.opus', 'songs/Best Life.opus', 'songs/Boasty (feat. Idris Elba) (Kingdom 93 Remix).opus', 'songs/Bodak Yellow.opus', 'songs/Bonkers.opus', 'songs/Can\'t Hold Us (feat. Ray Dalton).opus', 'songs/Cosby Sweater.opus', 'songs/Crazy In Love.opus', 'songs/Die Young.opus', 'songs/Don\'t Stop The Party.opus', 'songs/Freed From Desire.opus', 'songs/Friday (Dopamine Re-Edit).opus', 'songs/Full Thrift Samba (Samba _ 50 BPM).opus', 'songs/Funky Friday.opus', 'songs/Get Busy.opus', 'songs/God\'s Plan.opus', 'songs/Gold Digger.opus', 'songs/Gyal You a Party Animal.opus', 'songs/Hips Don\'T Lie.opus', 'songs/It’s My Birthday.opus', 'songs/Just Wanna Rock.opus', 'songs/Lean & Bop.opus', 'songs/Lemonade.opus', 'songs/Loyal.opus', 'songs/Nasty Freestyle (The Replay).opus', 'songs/No Type.opus', 'songs/No Words.opus', 'songs/ORANGE SODA.opus', 'songs/Rain.opus', 'songs/Ramenez la coupe à la maison.opus', 'songs/Rich Flex.opus', 'songs/Samba de Janeiro.opus', 'songs/SICKO MODE.opus', 'songs/Simmer (feat. Burna Boy).opus', 'songs/Single Ladies (Put a Ring on It).opus', 'songs/Sweet Dreams (Remix).opus', 'songs/Talk Dirty (feat. 2 Chainz).opus', 'songs/Temperature.opus', 'songs/The Box.opus', 'songs/Turn Down for What.opus', 'songs/Vamp Anthem.opus', 'songs/Whoopty.opus', 'songs/Worth It.opus', 'songs/Yeah 3x.opus']
+const songs = ["Better Days.opus", "Forget em.opus", "Get Through.opus", "Hustlin.opus", "Life.opus", "No Sleep.opus", "TIL I HEAREM SAY.opus", "Winning.opus"]
 
 
 
@@ -41,7 +41,7 @@ container.addEventListener('click', function () {
     filename = filename.replaceAll('%A0', ' ')
     console.log("filename:", filename);
 
-    document.title = filename;
+    document.title = filename + " by Neffex";
     
     audio1.load();
     audio1.play();
